@@ -11,6 +11,8 @@ cask "claude-usage" do
 
   app "Claude Usage.app"
 
+  zap trash: "~/Library/Preferences/com.github.bread-bang.claude-usage.plist"
+
   caveats <<~EOS
     Claude Usage lives in the menu bar and has no Dock icon. Launch it with:
 
@@ -20,8 +22,4 @@ cask "claude-usage" do
     you have signed in once (run `claude`). To start it automatically, add it under
     System Settings → General → Login Items.
   EOS
-
-  zap trash: [
-    "~/Library/Preferences/com.github.bread-bang.claude-usage.plist",
-  ]
 end
